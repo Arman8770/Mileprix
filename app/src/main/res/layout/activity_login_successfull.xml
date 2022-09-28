@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login_Successfull">
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.405"
+        app:srcCompat="@drawable/ic_checkround" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="@string/login_successful"
+        android:textColor="#28252C"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="235dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="23dp"
+        android:fontFamily="@font/inter_regular"
+        android:gravity="center|center_horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/you_are_successfully_logged_in_to_your_account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="335dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_round_shape"
+        android:fontFamily="@font/inter_bold"
+        android:text="@string/continuee"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:backgroundTint="#FF5701"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

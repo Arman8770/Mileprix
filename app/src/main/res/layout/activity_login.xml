@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+
+    <ImageView
+        android:id="@+id/mileprix_logo"
+        android:layout_width="174.68dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mileprix_logo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/inter_bold"
+        android:gravity="center_vertical"
+        android:text="@string/welcome"
+        android:textColor="#212121"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="@+id/mileprix_logo"
+        app:layout_constraintTop_toBottomOf="@+id/mileprix_logo" />
+
+    <TextView
+        android:id="@+id/tvshowNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:fontFamily="@font/inter_regular"
+        android:gravity="center_vertical"
+        android:text="@string/login_with_phone_number"
+        android:textColor="#212121"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/inter_medium"
+        android:gravity="center_vertical"
+        android:text="@string/phone_number"
+        android:textColor="#212121"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/ccp"
+        app:layout_constraintTop_toBottomOf="@+id/tvshowNumber" />
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/ccp"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/round_shape"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        app:ccpDialog_cornerRadius="10dp"
+        app:ccp_showNameCode="false"
+        app:ccp_showPhoneCode="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+
+        <EditText
+            android:id="@+id/phoneN"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="72dp"
+            android:layout_marginEnd="28dp"
+            android:autofillHints=""
+            android:background="@drawable/shaperactangle"
+            android:ems="10"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center_vertical"
+            android:hint="@string/phone_number"
+            android:inputType="number"
+            android:textColor="#212121"
+            android:textColorHint="#929292"
+            android:textSize="16sp"
+            tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck,TextContrastCheck" />
+    </com.hbb20.CountryCodePicker>
+
+    <Button
+        android:id="@+id/sendOtp"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/button_round_shape"
+        android:fontFamily="@font/inter_bold"
+        android:gravity="center"
+        android:text="@string/send_otp"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ccp"
+        tools:ignore="TextContrastCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

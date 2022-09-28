@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderlistView">
+
+    <RelativeLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="119dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="131.01dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="11dp"
+            android:importantForAccessibility="no"
+            app:srcCompat="@drawable/mileprix_logo"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <Button
+            android:id="@+id/activeOrder"
+            android:layout_width="167.5dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="59dp"
+            android:background="@drawable/button_corner_change"
+            android:fontFamily="@font/inter_semibold"
+            android:text="@string/active_orders"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/pastOrder"
+            android:layout_width="167.5dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="59dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/white_buttoncorner_round"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center"
+            android:text="@string/past_orders"
+            android:textAllCaps="false"
+            android:textColor="@color/black2"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@color/white"
+        android:paddingTop="16dp"
+        app:menu="@menu/navigation_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OTP">
+
+    <ImageView
+        android:id="@+id/mileprix_logo"
+        android:layout_width="174.68dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mileprix_logo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/inter_bold"
+        android:gravity="center_vertical"
+        android:text="@string/welcome"
+        android:textColor="#212121"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="@+id/mileprix_logo"
+        app:layout_constraintTop_toBottomOf="@+id/mileprix_logo" />
+
+    <TextView
+        android:id="@+id/tvshowNumber"
+        android:layout_width="323dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="11dp"
+        android:fontFamily="@font/inter_regular"
+        android:gravity="center_vertical"
+        android:text="@string/please_enter_otp_sent_to_your_given_phone_number"
+        android:textColor="#212121"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/inter_medium"
+        android:gravity="center_vertical"
+        android:text="@string/otp"
+        android:textColor="#212121"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/tvshowNumber"
+        app:layout_constraintTop_toBottomOf="@+id/tvshowNumber" />
+
+
+    <EditText
+        android:id="@+id/enterOtp"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:autofillHints=""
+        android:background="@drawable/round_shape"
+        android:ems="10"
+        android:fontFamily="@font/inter_regular"
+        android:gravity="center"
+        android:hint="@string/x_x_x_x_x_x"
+        android:inputType="number"
+        android:textColor="#212121"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/button_round_shape"
+        android:fontFamily="@font/inter_bold"
+        android:gravity="center"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:button="@drawable/custom_checkbox"
+        android:checked="false"
+        android:drawableStart="@android:color/transparent"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/inter_regular"
+        android:text="@string/keep_me_signed_in"
+        android:textColor="#28252C"
+        app:layout_constraintStart_toStartOf="@+id/enterOtp"
+        app:layout_constraintTop_toBottomOf="@+id/enterOtp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/reSendOtp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/resend_otp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submit" />
+
+    <TextView
+        android:id="@+id/myNumber"
+        android:layout_width="200dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="115dp"
+        android:fontFamily="@font/inter_medium"
+        android:textColor="#28252C"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvshowNumber"
+        app:layout_constraintStart_toStartOf="@+id/tvshowNumber" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

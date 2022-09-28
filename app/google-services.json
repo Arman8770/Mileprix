@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "584646976697",
+    "project_id": "mileprix-b36a9",
+    "storage_bucket": "mileprix-b36a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:584646976697:android:6562078860eee7fb102768",
+        "android_client_info": {
+          "package_name": "com.armandev.mileprix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "584646976697-aodj5ut6ljnrq8pcooqg06rctfj9f03c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbAerePJa3BCnqHsQw3RB1pzQa8Uq60hY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "584646976697-aodj5ut6ljnrq8pcooqg06rctfj9f03c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

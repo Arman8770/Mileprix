@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".New_User">
+
+    <ImageView
+        android:id="@+id/mileprix_logo"
+        android:layout_width="174.68dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mileprix_logo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/inter_bold"
+        android:gravity="center_vertical"
+        android:text="@string/welcome"
+        android:textColor="#212121"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="@+id/mileprix_logo"
+        app:layout_constraintTop_toBottomOf="@+id/mileprix_logo" />
+
+    <TextView
+        android:id="@+id/tvshowNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="63dp"
+        android:fontFamily="@font/inter_regular"
+        android:gravity="center_vertical"
+        android:text="@string/one_more_step_enter_your_name_to_get_started"
+        android:textSize="16sp"
+        android:textColor="#28252C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="TextContrastCheck" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profileUpload"
+        android:layout_width="94dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="34dp"
+        android:background="#E0E0E0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvshowNumber"
+        app:shapeAppearanceOverlay="@style/Theme.Mileprix"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvshowNumber"
+        app:srcCompat="@drawable/ellipse_orange"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/todo" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/cameraUpload"
+        android:layout_width="94dp"
+        android:layout_height="94dp"
+        android:padding="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/profileUpload"
+        app:layout_constraintTop_toTopOf="@+id/profileUpload"
+        app:srcCompat="@drawable/ic_camera_phote"
+        tools:ignore="ImageContrastCheck" />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_medium"
+        android:gravity="center_vertical"
+        android:text="@string/first_name"
+        android:textColor="#212121"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/tvshowNumber"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+
+    <EditText
+        android:id="@+id/enterFirstName"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:autofillHints=""
+        android:background="@drawable/round_shape"
+        android:ems="10"
+        android:fontFamily="@font/inter_regular"
+        android:hint="@string/first_name"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp"
+        android:textColor="#212121"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:ignore="RtlHardcoded,RtlSymmetry,TextContrastCheck,DuplicateSpeakableTextCheck"
+        android:inputType="" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/inter_medium"
+        android:gravity="center_vertical"
+        android:text="@string/last_name"
+        android:textColor="#212121"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/enterFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/enterFirstName" />
+
+    <EditText
+        android:id="@+id/enterLastName"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:autofillHints=""
+        android:background="@drawable/round_shape"
+        android:ems="10"
+        android:fontFamily="@font/inter_regular"
+        android:hint="@string/last_name"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="#212121"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck"
+        android:inputType="" />
+
+    <Button
+        android:id="@+id/submitProfile"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/button_round_shape"
+        android:fontFamily="@font/inter_bold"
+        android:text="@string/continuee"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterLastName" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
