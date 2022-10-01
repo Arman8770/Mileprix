@@ -1,5 +1,6 @@
 package com.armandev.mileprix
 
+import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -10,6 +11,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.armandev.mileprix.Model.UserModel
+import com.github.dhaval2404.imagepicker.ImagePicker
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
@@ -27,9 +29,6 @@ class New_User : AppCompatActivity() {
     private lateinit var firstName : EditText
     private lateinit var lastName : EditText
     private lateinit var btSubmit : Button
-
-
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,10 +52,11 @@ class New_User : AppCompatActivity() {
 
         val imageButton = findViewById<ImageView>(R.id.imageButton)
         imageButton.setOnClickListener{
-            val intent = Intent()
-            intent.action = Intent.ACTION_GET_CONTENT
-            intent.type= "image/*"
-            startActivityForResult(intent, 1)
+            ImagePicker.with(this)
+                .crop(1f,1f)	    			//Crop image(Optional), Check Customization for more option
+                .compress(300)			//Final image size will be less than 1 MB(Optional)
+                .maxResultSize(300, 300)	//Final image resolution will be less than 1080 x 1080(Optional)
+                .start()
         }
 
         btSubmit=findViewById(R.id.submitProfile)
@@ -100,11 +100,16 @@ class New_User : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode == Activity.RESULT_OK) {
+            //Image Uri will not be null for RESULT_OK
+            storeIMGuri = data?.data!!
 
-        if (data!=null)
-            if (data.data!=null){
-                storeIMGuri = data.data!!
-                profileImage.setImageURI(storeIMGuri)
-            }
+            // Use Uri object instead of File to avoid storage permissions
+            profileImage.setImageURI(storeIMGuri)
+        } else if (resultCode == ImagePicker.RESULT_ERROR) {
+            Toast.makeText(this, ImagePicker.getError(data), Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(this, "Task Cancelled", Toast.LENGTH_SHORT).show()
+        }
     }
 }
